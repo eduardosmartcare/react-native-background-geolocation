@@ -1,6 +1,6 @@
 {
   "name": "@eduardosmartcare/react-native-background-geolocation",
-  "version": "0.6.8",
+  "version": "0.6.9",
   "description": "optimized background location tracking",
   "main": "./index.js",
   "types": "./index.d.ts",
