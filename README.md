@@ -1,15 +1,15 @@
 # @eduardosmartcare/react-native-background-geolocation
 
-[![CircleCI](https://circleci.com/gh/mauron85/react-native-background-geolocation/tree/master.svg?style=shield)](https://circleci.com/gh/mauron85/react-native-background-geolocation/tree/master)
-[![issuehunt-shield-v1](issuehunt-shield-v1.svg)](https://issuehunt.io/r/mauron85/react-native-background-geolocation/)
+[![CircleCI](https://circleci.com/gh/eduardosmartcare/react-native-background-geolocation/tree/master.svg?style=shield)](https://circleci.com/gh/eduardosmartcare/react-native-background-geolocation/tree/master)
+[![issuehunt-shield-v1](issuehunt-shield-v1.svg)](https://issuehunt.io/r/eduardosmartcare/react-native-background-geolocation/)
 
 ## We're moving
 
-Npm package is now [@mauron85/react-native-background-geolocation](https://www.npmjs.com/package/@mauron85/react-native-background-geolocation)!
+Npm package is now [@eduardosmartcare/react-native-background-geolocation](https://www.npmjs.com/package/@eduardosmartcare/react-native-background-geolocation)!
 
 ## Submitting issues
 
-All new issues should follow instructions in [ISSUE_TEMPLATE.md](https://raw.githubusercontent.com/mauron85/react-native-background-geolocation/master/ISSUE_TEMPLATE.md).
+All new issues should follow instructions in [ISSUE_TEMPLATE.md](https://raw.githubusercontent.com/eduardosmartcare/react-native-background-geolocation/master/ISSUE_TEMPLATE.md).
 A properly filled issue report will significantly reduce number of follow up questions and decrease issue resolving time.
 Most issues cannot be resolved without debug logs. Please try to isolate debug lines related to your issue.
 Instructions for how to prepare debug logs can be found in section [Debugging](#debugging).
@@ -18,7 +18,7 @@ In that case, also provide relevant parts of output of `adb logcat` command.
 
 ## Issue Hunt
 
-Fund your issues or feature request to drag attraction of developers. Checkout our [issue hunt page](https://issuehunt.io/r/mauron85/react-native-background-geolocation/issues).
+Fund your issues or feature request to drag attraction of developers. Checkout our [issue hunt page](https://issuehunt.io/r/eduardosmartcare/react-native-background-geolocation/issues).
 
 # Android background service issues
 There are repeatedly reported issues with some android devices not working in the background. Check if your device model is on  [dontkillmyapp list](https://dontkillmyapp.com) before you report new issue. For more information check out [dontkillmyapp.com](https://dontkillmyapp.com/problem).
@@ -32,7 +32,7 @@ The notification can only be disabled, when app is running in the foreground, by
 Recommend you to read https://developer.android.com/about/versions/oreo/background
 
 ## Description
-React Native fork of [cordova-plugin-background-geolocation](https://github.com/mauron85/cordova-plugin-background-geolocation)
+React Native fork of [cordova-plugin-background-geolocation](https://github.com/eduardosmartcare/cordova-plugin-background-geolocation)
 with battery-saving "circular region monitoring" and "stop detection".
 
 This plugin can be used for geolocation when the app is running in the foreground or background.
@@ -87,14 +87,14 @@ ext {
 
 ## Example Apps
 
-The repository [react-native-background-geolocation-example](https://github.com/mauron85/react-native-background-geolocation-example) hosts an example app for both iOS and Android platform.
+The repository [react-native-background-geolocation-example](https://github.com/eduardosmartcare/react-native-background-geolocation-example) hosts an example app for both iOS and Android platform.
 
 ## Quick example
 
 ```javascript
 import React, { Component } from 'react';
 import { Alert } from 'react-native';
-import BackgroundGeolocation from '@mauron85/react-native-background-geolocation';
+import BackgroundGeolocation from '@eduardosmartcare/react-native-background-geolocation';
 
 class BgTracking extends Component {
   componentDidMount() {
@@ -226,7 +226,7 @@ Since version 0.60 React Native does linking of modules [automatically](https://
 As plugin depends on additional 'common' module, it is required to link it with:
 
 ```
-node ./node_modules/@mauron85/react-native-background-geolocation/scripts/postlink.js
+node ./node_modules/@eduardosmartcare/react-native-background-geolocation/scripts/postlink.js
 ```
 
 ### Manual setup
@@ -237,10 +237,10 @@ In `android/settings.gradle`
 
 ```gradle
 ...
-include ':@mauron85_react-native-background-geolocation-common'
-project(':@mauron85_react-native-background-geolocation-common').projectDir = new File(rootProject.projectDir, '../node_modules/@mauron85/react-native-background-geolocation/android/common')
-include ':@mauron85_react-native-background-geolocation'
-project(':@mauron85_react-native-background-geolocation').projectDir = new File(rootProject.projectDir, '../node_modules/@mauron85/react-native-background-geolocation/android/lib')
+include ':@eduardosmartcare_react-native-background-geolocation-common'
+project(':@eduardosmartcare_react-native-background-geolocation-common').projectDir = new File(rootProject.projectDir, '../node_modules/@eduardosmartcare/react-native-background-geolocation/android/common')
+include ':@eduardosmartcare_react-native-background-geolocation'
+project(':@eduardosmartcare_react-native-background-geolocation').projectDir = new File(rootProject.projectDir, '../node_modules/@eduardosmartcare/react-native-background-geolocation/android/lib')
 ...
 ```
 
@@ -249,7 +249,7 @@ In `android/app/build.gradle`
 ```gradle
 dependencies {
     ...
-    compile project(':@mauron85_react-native-background-geolocation')
+    compile project(':@eduardosmartcare_react-native-background-geolocation')
     ...
 }
 ```
@@ -279,7 +279,7 @@ public class MainApplication extends Application implements ReactApplication {
 #### iOS setup
 
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Add `./node_modules/@mauron85/react-native-background-geolocation/ios/RCTBackgroundGeolocation.xcodeproj`
+2. Add `./node_modules/@eduardosmartcare/react-native-background-geolocation/ios/RCTBackgroundGeolocation.xcodeproj`
 3. In the XCode project navigator, select your project, select the `Build Phases` tab and in the `Link Binary With Libraries` section add **libRCTBackgroundGeolocation.a**
 4. Add `UIBackgroundModes` **location** to `Info.plist`
 5. Add `NSMotionUsageDescription` **App requires motion tracking** to `Info.plist` (required by ACTIVITY_PROVIDER)
@@ -516,7 +516,7 @@ Return all logged events. Useful for plugin debugging.
 | `minLevel` | `String`      | return log entries above level. Available levels: ["TRACE", "DEBUG", "INFO", "WARN", "ERROR]      |
 | `success`  | `Function`    | callback function which will be called with log entries                                           |
 
-*[Example of infinite log scrolling](https://github.com/mauron85/react-native-background-geolocation-example/blob/master/src/scenes/Logs.js)
+*[Example of infinite log scrolling](https://github.com/eduardosmartcare/react-native-background-geolocation-example/blob/master/src/scenes/Logs.js)
 
 Format of log entry:
 
@@ -744,7 +744,7 @@ Add string resource "account_name" into "android/app/src/main/res/values/strings
 
 ### Example of backend server
 
-[Background-geolocation-server](https://github.com/mauron85/background-geolocation-server) is a backend server written in nodejs with CORS - Cross-Origin Resource Sharing support.
+[Background-geolocation-server](https://github.com/eduardosmartcare/background-geolocation-server) is a backend server written in nodejs with CORS - Cross-Origin Resource Sharing support.
 There are instructions how to run it and simulate locations on Android, iOS Simulator and Genymotion.
 
 ## Debugging
